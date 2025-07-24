@@ -1,17 +1,9 @@
-//
-//  FeedView.swift
-//  Sunrise Fit
-//
-//  Created by Karim Abou Zeid on 19.06.19.
-//  Copyright © 2019 Karim Abou Zeid Software. All rights reserved.
-//
-
 import SwiftUI
 import CoreData
 import Combine
 import WorkoutDataKit
 
-struct FeedView : View {
+struct FeedView: View {
     @EnvironmentObject var exerciseStore: ExerciseStore
     @ObservedObject private var pinnedChartsStore = PinnedChartsStore.shared
     
@@ -68,13 +60,15 @@ struct FeedView : View {
                 }) {
                     HStack {
                         Image(systemName: "plus")
-                        Text("Pin Chart")
+                        Text("添加图表") // 替换 "Pin Chart"
                     }
                 }
             }
             .listStyleCompat_InsetGroupedListStyle()
-            .navigationBarTitle(Text("Feed"))
-            .navigationBarItems(trailing: Button("Edit") { activeSheet = .pinnedChartEditor })
+            .navigationBarTitle(Text("动态")) // 替换 "Feed"
+            .navigationBarItems(trailing: Button("编辑") { // 替换 "Edit"
+                activeSheet = .pinnedChartEditor
+            })
             .sheet(item: $activeSheet) { type in
                 sheetView(type: type)
             }
@@ -91,13 +85,16 @@ private struct PinnedChartEditSheet: View {
     
     var body: some View {
         VStack(spacing: 0) {
-            SheetBar(title: "Edit Charts", leading: Button("Close") { self.presentationMode.wrappedValue.dismiss() }, trailing: EmptyView()).padding()
+            SheetBar(title: "编辑图表", // 替换 "Edit Charts"
+                     leading: Button("关闭") { // 替换 "Close"
+                self.presentationMode.wrappedValue.dismiss()
+            }, trailing: EmptyView()).padding()
             
             Divider()
             
             List {
                 ForEach(pinnedChartsStore.pinnedCharts, id: \.self) { chart in
-                    Text((exerciseStore.find(with: chart.exerciseUuid)?.title ?? "Unknown Exercise") + " (\(chart.measurementType.title))")
+                    Text((exerciseStore.find(with: chart.exerciseUuid)?.title ?? "未知动作") + " (\(chart.measurementType.title))") // 替换 "Unknown Exercise"
                 }
                 .onDelete { offsets in
                     self.pinnedChartsStore.pinnedCharts.remove(atOffsets: offsets)
@@ -111,7 +108,7 @@ private struct PinnedChartEditSheet: View {
                          VStack {
                             Spacer()
                             
-                            Text("You don't have any charts pinned.")
+                            Text("您还没有固定的图表。") // 替换 "You don't have any charts pinned."
                                 .multilineTextAlignment(.center)
                                 .foregroundColor(.secondary)
                                 .padding()
@@ -156,14 +153,17 @@ private struct PinnedChartSelectorSheet: View {
                     self.resetAndDismiss()
                 }
             }
-        } + [.cancel()]
+        } + [.cancel(Text("取消"))] // 替换 "Cancel"
     }
     
     var body: some View {
         VStack(spacing: 0) {
             VStack(spacing: 0) {
-                SheetBar(title: "Pin Chart", leading: Button("Cancel") { self.resetAndDismiss() }, trailing: EmptyView())
-                TextField("Search", text: $filter.filter)
+                SheetBar(title: "添加图表", // 替换 "Pin Chart"
+                         leading: Button("取消") { // 替换 "Cancel"
+                    self.resetAndDismiss()
+                }, trailing: EmptyView())
+                TextField("搜索", text: $filter.filter) // 替换 "Search"
                     .textFieldStyle(SearchTextFieldStyle(text: $filter.filter))
                     .padding(.top)
             }.padding()
@@ -172,7 +172,6 @@ private struct PinnedChartSelectorSheet: View {
             
             ExerciseSingleSelectionView(exerciseGroups: filter.exerciseGroups) { exercise in
                 guard UIDevice.current.userInterfaceIdiom != .pad else { // TODO: actionSheet not supported on iPad yet (13.2)
-                    // for now just add the first measuremnt type
                     for measurementType in WorkoutExerciseChartData.MeasurementType.allCases {
                         let pinnedChart = PinnedChart(exerciseUuid: exercise.uuid, measurementType: measurementType)
                         if !self.pinnedChartsStore.pinnedCharts.contains(pinnedChart) {
@@ -193,7 +192,7 @@ private struct PinnedChartSelectorSheet: View {
 }
 
 #if DEBUG
-struct FeedView_Previews : PreviewProvider {
+struct FeedView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
             FeedView()

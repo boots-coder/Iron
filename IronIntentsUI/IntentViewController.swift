@@ -17,7 +17,7 @@ import WorkoutDataKit
 // You can test this example integration by saying things to Siri like:
 // "Send a message using <myApp>"
 
-/// - NOTE: somehow we don't receive logs from this class...
+/// - NOTE: somehow we don't receive logs from this class...Localizable
 class IntentViewController: UIViewController, INUIHostedViewControlling {
     
     override func viewDidLoad() {

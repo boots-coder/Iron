@@ -7,8 +7,9 @@
 //
 
 import SwiftUI
-import Charts
+import DGCharts
 import WorkoutDataKit
+
 
 struct ExerciseChartView : View {
     @EnvironmentObject var settingsStore: SettingsStore
@@ -51,13 +52,14 @@ struct ExerciseChartView : View {
                 if #available(iOS 14.0, *) {
                     chartView.tintColor = UIColor(exercise.muscleGroupColor)
                 } else {
-                    chartView.tintColor = .systemBlue
+                    chartView.tintColor = UIColor.systemBlue
+
                 }
             } else {
                 if #available(iOS 14.0, *) {
                     chartView.tintColor = UIColor(.accentColor)
                 } else {
-                    chartView.tintColor = .systemBlue
+                    chartView.tintColor = UIColor.systemBlue
                 }
             }
         })

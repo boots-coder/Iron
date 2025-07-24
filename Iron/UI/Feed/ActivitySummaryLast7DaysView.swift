@@ -113,12 +113,12 @@ struct ActivitySummaryLast7DaysView_Previews: PreviewProvider {
     static var previews: some View {
         List {
             VStack(alignment: .leading, spacing: 8) {
-                Text("Activity")
+                Text("活动")
                     .bold()
                     .font(.subheadline)
                     .foregroundColor(.accentColor)
                 
-                Text("Summary Last 7 Days")
+                Text("过去七天总览")
                     .font(.headline)
                 
                 Divider()

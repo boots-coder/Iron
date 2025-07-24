@@ -35,7 +35,7 @@ struct StartWorkoutView: View {
                     } label: {
                         HStack {
                             Spacer()
-                            Text("Start Workout").font(.headline)
+                            Text("开始训练").font(.headline)
                             Spacer()
                         }
                         .padding(6)
@@ -49,7 +49,7 @@ struct StartWorkoutView: View {
                     } label: {
                         HStack {
                             Spacer()
-                            Text("Start Workout").font(.headline)
+                            Text("开始训练").font(.headline)
                             Spacer()
                         }
                         .padding(6)
@@ -80,16 +80,16 @@ struct StartWorkoutView: View {
                     }) {
                         HStack {
                             Image(systemName: "plus")
-                            Text("New Workout Plan")
+                            Text("制定新的计划")
                         }
                     }
                 }
             }
             .listStyleCompat_InsetGroupedListStyle()
-            .navigationBarTitle("Workout")
+            .navigationBarTitle("训练")
             .actionSheet(item: $offsetsToDelete) { offsets in
-                ActionSheet(title: Text("This cannot be undone."), buttons: [
-                    .destructive(Text("Delete Workout Plan"), action: {
+                ActionSheet(title: Text("这个目前不可执行."), buttons: [
+                    .destructive(Text("删除该训练计划"), action: {
                         self.deleteAt(offsets: offsets)
                     }),
                     .cancel()

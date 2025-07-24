@@ -13,37 +13,40 @@ import WorkoutDataKit
 extension Exercise {
     static func colorFor(muscleGroup: String) -> Color {
         switch muscleGroup {
-        case "abdominals":
+        case "腹部":
             return .yellow
-        case "arms":
+        case "手臂":
             return .purple
-        case "shoulders":
+        case "肩膀":
             return .orange
-        case "back":
+        case "背部":
             return .blue
-        case "legs":
+        case "腿部":
             return .green
-        case "chest":
+        case "胸部":
             return .red
+        case "未分类":
+            return .gray
         default:
             return .secondary
         }
     }
-    
     static func imageFor(muscleGroup: String) -> Image {
         switch muscleGroup {
-        case "abdominals":
+        case "腹部":
             return Image(systemName: "a.circle.fill")
-        case "arms":
-            return Image(systemName: "a.circle.fill")
-        case "shoulders":
+        case "手臂":
+            return Image(systemName: "h.circle.fill")
+        case "肩膀":
             return Image(systemName: "s.circle.fill")
-        case "back":
+        case "背部":
             return Image(systemName: "b.circle.fill")
-        case "legs":
+        case "腿部":
             return Image(systemName: "l.circle.fill")
-        case "chest":
+        case "胸部":
             return Image(systemName: "c.circle.fill")
+        case "未分类":
+            return Image(systemName: "questionmark.circle.fill")
         default:
             return Image(systemName: "o.circle.fill")
         }

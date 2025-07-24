@@ -78,7 +78,7 @@ struct LastWorkoutWidgetEntryView : View {
             VStack(alignment: .leading) {
                 Spacer()
                 
-                Text("Activity")
+                Text("活动")
                     .font(.headline)
                     .foregroundColor(.primary)
                 
@@ -86,7 +86,7 @@ struct LastWorkoutWidgetEntryView : View {
                 
                 HStack {
                     VStack(alignment: .leading) {
-                        Text("Last Workout")
+                        Text("上次的训练")
                             .font(.subheadline)
                             .foregroundColor(Color.white.opacity(0.8))
                         
@@ -97,7 +97,7 @@ struct LastWorkoutWidgetEntryView : View {
                                 +
                                 Text(" ")
                                 +
-                                Text(days == 1 ? "day" : "days")
+                                Text(days == 1 ? "天" : "天")
                                 .font(.system(.body, design: .rounded))
                         } else {
                             Text("-")
@@ -128,8 +128,8 @@ struct IronWidget: Widget {
         StaticConfiguration(kind: WidgetKind.lastWorkout.rawValue, provider: Provider()) { entry in
             LastWorkoutWidgetEntryView(entry: entry)
         }
-        .configurationDisplayName("Last Workout")
-        .description("The number of days since the last workout.")
+        .configurationDisplayName("上次训练")
+        .description("距离上次训练的天数")
         .supportedFamilies([.systemSmall])
     }
 }

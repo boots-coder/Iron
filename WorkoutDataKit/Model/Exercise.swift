@@ -34,8 +34,8 @@ extension Exercise {
     }
     
     public var muscleGroup: String {
-        guard let muscle = primaryMuscle.first else { return "other" }
-        return Self.muscleGroup(for: muscle) ?? "other"
+        guard let muscle = primaryMuscle.first else { return "未分类" }
+        return Self.muscleGroup(for: muscle) ?? "未分类"
     }
     
     public static var muscleNames: [String] {
@@ -50,44 +50,38 @@ extension Exercise {
         muscleGroupNames[muscle]
     }
     
-    private static var commonMuscleNames: [String : String] = [
-        "abdominals": "abdominals",
-        "biceps brachii": "biceps",
-        "deltoid": "shoulders",
-        "erector spinae": "lower back",
-        "gastrocnemius": "calves",
-        "soleus": "calves",
-        "glutaeus maximus": "glutes",
-        "ischiocrural muscles": "hamstrings",
-        "latissimus dorsi": "latissimus",
-        "obliques": "obliques",
-        "pectoralis major": "chest",
-        "quadriceps": "quadriceps",
-        "trapezius": "trapezius",
-        "triceps brachii": "triceps"
+    private static var commonMuscleNames: [String: String] = [
+        "腹肌": "腹肌",
+        "肱二头肌": "肱二头肌",
+        "三角肌": "三角肌",
+        "竖脊肌": "竖脊肌",
+        "腓肠肌": "腓肠肌",
+        "比目鱼肌": "比目鱼肌",
+        "臀大肌": "臀大肌",
+        "股二头肌": "股二头肌",
+        "背阔肌": "背阔肌",
+        "腹外斜肌": "腹外斜肌",
+        "胸大肌": "胸大肌",
+        "股四头肌": "股四头肌",
+        "斜方肌": "斜方肌",
+        "肱三头肌": "肱三头肌"
     ]
-    
-    private static var muscleGroupNames: [String : String] = [
-        // abs
-        "abdominals": "abdominals",
-        "obliques": "abdominals",
-        // arms
-        "biceps brachii": "arms",
-        "triceps brachii": "arms",
-        // shoulders
-        "deltoid": "shoulders",
-        // back
-        "erector spinae": "back",
-        "latissimus dorsi": "back",
-        "trapezius": "back",
-        // legs
-        "gastrocnemius": "legs",
-        "soleus": "legs",
-        "glutaeus maximus": "legs",
-        "ischiocrural muscles": "legs",
-        "quadriceps": "legs",
-        // chest
-        "pectoralis major": "chest"
+
+    private static var muscleGroupNames: [String: String] = [
+        "腹肌": "腹部",
+        "腹外斜肌": "腹部",
+        "肱二头肌": "手臂",
+        "肱三头肌": "手臂",
+        "三角肌": "肩膀",
+        "竖脊肌": "背部",
+        "背阔肌": "背部",
+        "斜方肌": "背部",
+        "腓肠肌": "腿部",
+        "比目鱼肌": "腿部",
+        "臀大肌": "腿部",
+        "股二头肌": "腿部",
+        "股四头肌": "腿部",
+        "胸大肌": "胸部"
     ]
 }
 
@@ -101,20 +95,20 @@ extension Exercise {
         public var title: String {
             switch self {
             case .barbell:
-                return "barbell based"
+                return "杠铃训练"
             case .dumbbell:
-                return "dumbbell based"
+                return "哑铃训练"
             case .other:
-                return "other"
+                return "其他"
             }
         }
         
         var equipment: String? {
             switch self {
             case .barbell:
-                return "barbell"
+                return "杠铃"
             case .dumbbell:
-                return "dumbbell"
+                return "哑铃"
             case .other:
                 return nil
             }

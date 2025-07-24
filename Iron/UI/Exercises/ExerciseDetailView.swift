@@ -247,7 +247,7 @@ struct ExerciseDetailView : View {
                         .padding([.leading, .top, .bottom])
                 }
                 if exercise.isCustom {
-                    Button("Edit") {
+                    Button("编辑") {
                         self.activeSheet = .editExercise
                     }
                 }

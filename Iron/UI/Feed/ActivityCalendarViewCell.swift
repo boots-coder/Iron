@@ -1,11 +1,3 @@
-//
-//  ActivityCalendarViewCell.swift
-//  Iron
-//
-//  Created by Karim Abou Zeid on 05.10.20.
-//  Copyright © 2020 Karim Abou Zeid Software. All rights reserved.
-//
-
 import SwiftUI
 
 struct ActivityCalendarViewCell: View {
@@ -13,19 +5,19 @@ struct ActivityCalendarViewCell: View {
     
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
-            Text("Activity")
+            Text("活动") // 替换 "Activity"
                 .bold()
                 .font(.subheadline)
                 .foregroundColor(.accentColor)
             
             HStack {
-                Text("Workouts Last 28 Days")
+                Text("过去 28 天的训练次数") // 替换 "Workouts Last 28 Days"
                     .font(.headline)
                 
                 Spacer()
                 
                 if let workoutsLast28Days = workoutsLast28Days {
-                    Text("\(workoutsLast28Days) workouts")
+                    Text("\(workoutsLast28Days) 次训练") // 替换 "workouts" 为 "次训练"
                         .foregroundColor(.secondary)
                 }
             }

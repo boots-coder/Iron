@@ -49,10 +49,10 @@ struct CreateCustomExerciseSheet: View {
     var body: some View {
         NavigationView {
             EditCustomExerciseView(exerciseValues: $exerciseValues)
-                .navigationBarTitle("Edit Exercise", displayMode: .inline)
+                .navigationBarTitle("编辑这个运动", displayMode: .inline)
                 .navigationBarItems(
                     leading:
-                    Button("Cancel") {
+                    Button("取消") {
                         self.presentationMode.wrappedValue.dismiss()
                     },
                     trailing: saveButton

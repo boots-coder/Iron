@@ -94,19 +94,24 @@ extension ExerciseStore {
     public static func splitIntoMuscleGroups(exercises: [Exercise]) -> [ExerciseGroup] {
         var groups = [ExerciseGroup]()
         var nextIndex = 0
+
+        // 自定义排序，确保“未分类”在最后
         let exercises = exercises.sorted { (a, b) -> Bool in
-            a.muscleGroup < b.muscleGroup
+            if a.muscleGroup == "未分类" { return false } // "未分类" 放在最后
+            if b.muscleGroup == "未分类" { return true }
+            return a.muscleGroup < b.muscleGroup // 其他按字母顺序排序
         }
+
         while (exercises.count > nextIndex) {
             let groupName = exercises[nextIndex].muscleGroup
             var muscleGroup = exercises.filter({ (exercise) -> Bool in
                 exercise.muscleGroup == groupName
             })
-            
+
             nextIndex = exercises.firstIndex(where: { (exercise) -> Bool in
                 exercise.uuid == muscleGroup.last!.uuid
             })! + 1
-            
+
             // do this after nextIndex is set
             muscleGroup = muscleGroup.sorted(by: { (a, b) -> Bool in
                 a.title < b.title

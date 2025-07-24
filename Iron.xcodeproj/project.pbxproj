@@ -3,15 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		8A0683AE239C5B53001F0A1E /* WorkoutDataStorage+shared2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF07874239B246600CA95D6 /* WorkoutDataStorage+shared2.swift */; };
 		8A0683AF239C5B6F001F0A1E /* WorkoutDataStorage+GroupStoreURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF0785F239AF57A00CA95D6 /* WorkoutDataStorage+GroupStoreURL.swift */; };
 		8A0683B0239C5B83001F0A1E /* FileManager+GroupContainerURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF0785D239AF53500CA95D6 /* FileManager+GroupContainerURL.swift */; };
-		8A0683B2239C6170001F0A1E /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 8A6043A2239C4E1F00CFB7C0 /* Intents.intentdefinition */; };
-		8A0683B3239C6171001F0A1E /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 8A6043A2239C4E1F00CFB7C0 /* Intents.intentdefinition */; };
 		8A0683B5239C76E0001F0A1E /* Shortcuts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0683B4239C76E0001F0A1E /* Shortcuts.swift */; };
 		8A0683B7239C77B4001F0A1E /* WorkoutDataKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AB5210E23992ABC008064B2 /* WorkoutDataKit.framework */; };
 		8A0683BC239C77BB001F0A1E /* WorkoutDataKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AB5210E23992ABC008064B2 /* WorkoutDataKit.framework */; };
@@ -74,9 +72,6 @@
 		8A3C5F99218E3F4F00467DA6 /* UserDefaults+PinnedCharts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3C5F98218E3F4F00467DA6 /* UserDefaults+PinnedCharts.swift */; };
 		8A4C129A23A2A5DA0026BD4E /* IntentWorkoutSet+WorkoutSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4C129923A2A5DA0026BD4E /* IntentWorkoutSet+WorkoutSet.swift */; };
 		8A4D3B7223858F6F007A3792 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4D3B7123858F6F007A3792 /* NotificationManager.swift */; };
-		8A50F127243F5253003B3A6E /* Charts in Frameworks */ = {isa = PBXBuildFile; productRef = 8A50F126243F5253003B3A6E /* Charts */; };
-		8A50F129243F525D003B3A6E /* Charts in Frameworks */ = {isa = PBXBuildFile; productRef = 8A50F128243F525D003B3A6E /* Charts */; };
-		8A50F12B243F5262003B3A6E /* Charts in Frameworks */ = {isa = PBXBuildFile; productRef = 8A50F12A243F5262003B3A6E /* Charts */; };
 		8A51E493239D45B200336296 /* ViewOneRepMaxIntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A51E492239D45B200336296 /* ViewOneRepMaxIntentHandler.swift */; };
 		8A56A47F22D7C93B0076E99A /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A56A47E22D7C93B0076E99A /* SettingsView.swift */; };
 		8A56A48122D7CDC60076E99A /* UserDefaults+Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A56A48022D7CDC60076E99A /* UserDefaults+Settings.swift */; };
@@ -93,7 +88,6 @@
 		8A604393239C4DBB00CFB7C0 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A604391239C4DBB00CFB7C0 /* MainInterface.storyboard */; };
 		8A604397239C4DBB00CFB7C0 /* IronIntentsUI.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 8A60438B239C4DBB00CFB7C0 /* IronIntentsUI.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		8A60439A239C4DBB00CFB7C0 /* IronIntents.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 8A604382239C4DBB00CFB7C0 /* IronIntents.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		8A6043A3239C4E1F00CFB7C0 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 8A6043A2239C4E1F00CFB7C0 /* Intents.intentdefinition */; };
 		8A6043A7239C537A00CFB7C0 /* ViewPersonalRecordsIntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6043A6239C537A00CFB7C0 /* ViewPersonalRecordsIntentHandler.swift */; };
 		8A63B3772329463A001BD7B5 /* CurrentWorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A63B3752329463A001BD7B5 /* CurrentWorkoutView.swift */; };
 		8A63B3782329463A001BD7B5 /* StartWorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A63B3762329463A001BD7B5 /* StartWorkoutView.swift */; };
@@ -369,6 +363,18 @@
 		8AFF0D842302C60000F762A2 /* MockWorkoutData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFF0D832302C60000F762A2 /* MockWorkoutData.swift */; };
 		8AFF0D882303062400F762A2 /* Benchmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A16BBD822E337A0002150F0 /* Benchmark.swift */; };
 		8AFF0D8A23032DC700F762A2 /* DateFormatter+OptionalDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFF0D8923032DC700F762A2 /* DateFormatter+OptionalDate.swift */; };
+		E9744A292E2F7BDF008E96D4 /* DGCharts in Frameworks */ = {isa = PBXBuildFile; productRef = E9744A282E2F7BDF008E96D4 /* DGCharts */; };
+		E9744A2B2E2F7C00008E96D4 /* DGCharts in Frameworks */ = {isa = PBXBuildFile; productRef = E9744A2A2E2F7C00008E96D4 /* DGCharts */; };
+		E9744A2D2E2F7C07008E96D4 /* DGCharts in Frameworks */ = {isa = PBXBuildFile; productRef = E9744A2C2E2F7C07008E96D4 /* DGCharts */; };
+		E9744A2F2E2F7DA7008E96D4 /* DGChartsDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = E9744A2E2E2F7DA7008E96D4 /* DGChartsDynamic */; };
+		E9744A302E2F7DA7008E96D4 /* DGChartsDynamic in Embed Frameworks */ = {isa = PBXBuildFile; productRef = E9744A2E2E2F7DA7008E96D4 /* DGChartsDynamic */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		E9744A322E2F7DAE008E96D4 /* DGChartsDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = E9744A312E2F7DAE008E96D4 /* DGChartsDynamic */; };
+		E9744A332E2F7DAE008E96D4 /* DGChartsDynamic in Embed Frameworks */ = {isa = PBXBuildFile; productRef = E9744A312E2F7DAE008E96D4 /* DGChartsDynamic */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		E9744A352E2F7DEC008E96D4 /* DGChartsDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = E9744A342E2F7DEC008E96D4 /* DGChartsDynamic */; };
+		E9744A362E2F7DEC008E96D4 /* DGChartsDynamic in Embed Frameworks */ = {isa = PBXBuildFile; productRef = E9744A342E2F7DEC008E96D4 /* DGChartsDynamic */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		E9EF1DBD2E3277F30028B518 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = E9EF1DBC2E3277F30028B518 /* Intents.intentdefinition */; };
+		E9EF1DBE2E3277F30028B518 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = E9EF1DBC2E3277F30028B518 /* Intents.intentdefinition */; };
+		E9EF1DBF2E3277F30028B518 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = E9EF1DBC2E3277F30028B518 /* Intents.intentdefinition */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -451,6 +457,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				E9744A332E2F7DAE008E96D4 /* DGChartsDynamic in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -461,6 +468,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				E9744A302E2F7DA7008E96D4 /* DGChartsDynamic in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -506,6 +514,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				E9744A362E2F7DEC008E96D4 /* DGChartsDynamic in Embed Frameworks */,
 				8AB5211623992ABC008064B2 /* WorkoutDataKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -574,7 +583,6 @@
 		8A60438F239C4DBB00CFB7C0 /* IntentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentViewController.swift; sourceTree = "<group>"; };
 		8A604392239C4DBB00CFB7C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		8A604394239C4DBB00CFB7C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8A6043A2239C4E1F00CFB7C0 /* Intents.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = Intents.intentdefinition; sourceTree = "<group>"; };
 		8A6043A6239C537A00CFB7C0 /* ViewPersonalRecordsIntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewPersonalRecordsIntentHandler.swift; sourceTree = "<group>"; };
 		8A63B3752329463A001BD7B5 /* CurrentWorkoutView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentWorkoutView.swift; sourceTree = "<group>"; };
 		8A63B3762329463A001BD7B5 /* StartWorkoutView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartWorkoutView.swift; sourceTree = "<group>"; };
@@ -753,6 +761,8 @@
 		8AFE11B3232CF2E2000E9393 /* SheetBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetBar.swift; sourceTree = "<group>"; };
 		8AFF0D832302C60000F762A2 /* MockWorkoutData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockWorkoutData.swift; sourceTree = "<group>"; };
 		8AFF0D8923032DC700F762A2 /* DateFormatter+OptionalDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+OptionalDate.swift"; sourceTree = "<group>"; };
+		E9EF1DBC2E3277F30028B518 /* Intents.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = Intents.intentdefinition; sourceTree = "<group>"; };
+		E9EF1DC02E3278F40028B518 /* IronIntentsDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = IronIntentsDebug.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -760,8 +770,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9744A2D2E2F7C07008E96D4 /* DGCharts in Frameworks */,
+				E9744A322E2F7DAE008E96D4 /* DGChartsDynamic in Frameworks */,
 				8A0683B7239C77B4001F0A1E /* WorkoutDataKit.framework in Frameworks */,
-				8A50F129243F525D003B3A6E /* Charts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -769,8 +780,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9744A2F2E2F7DA7008E96D4 /* DGChartsDynamic in Frameworks */,
 				8A60438D239C4DBB00CFB7C0 /* IntentsUI.framework in Frameworks */,
-				8A50F12B243F5262003B3A6E /* Charts in Frameworks */,
+				E9744A2B2E2F7C00008E96D4 /* DGCharts in Frameworks */,
 				8A0683BC239C77BB001F0A1E /* WorkoutDataKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -779,9 +791,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9744A352E2F7DEC008E96D4 /* DGChartsDynamic in Frameworks */,
 				8AB0C94D23453F080009F031 /* HealthKit.framework in Frameworks */,
+				E9744A292E2F7BDF008E96D4 /* DGCharts in Frameworks */,
 				8AB5211523992ABC008064B2 /* WorkoutDataKit.framework in Frameworks */,
-				8A50F127243F5253003B3A6E /* Charts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -823,7 +836,7 @@
 		8A0683B1239C615E001F0A1E /* Siri */ = {
 			isa = PBXGroup;
 			children = (
-				8A6043A2239C4E1F00CFB7C0 /* Intents.intentdefinition */,
+				E9EF1DBC2E3277F30028B518 /* Intents.intentdefinition */,
 			);
 			path = Siri;
 			sourceTree = "<group>";
@@ -1114,6 +1127,7 @@
 		8A604383239C4DBB00CFB7C0 /* IronIntents */ = {
 			isa = PBXGroup;
 			children = (
+				E9EF1DC02E3278F40028B518 /* IronIntentsDebug.entitlements */,
 				8A6043A9239C538E00CFB7C0 /* Support */,
 				8A604384239C4DBB00CFB7C0 /* IntentHandler.swift */,
 				8AF5DAFA242E800800A90A60 /* StartWorkoutIntentHandler.swift */,
@@ -1548,7 +1562,8 @@
 			);
 			name = IronIntents;
 			packageProductDependencies = (
-				8A50F128243F525D003B3A6E /* Charts */,
+				E9744A2C2E2F7C07008E96D4 /* DGCharts */,
+				E9744A312E2F7DAE008E96D4 /* DGChartsDynamic */,
 			);
 			productName = IronIntents;
 			productReference = 8A604382239C4DBB00CFB7C0 /* IronIntents.appex */;
@@ -1570,7 +1585,8 @@
 			);
 			name = IronIntentsUI;
 			packageProductDependencies = (
-				8A50F12A243F5262003B3A6E /* Charts */,
+				E9744A2A2E2F7C00008E96D4 /* DGCharts */,
+				E9744A2E2E2F7DA7008E96D4 /* DGChartsDynamic */,
 			);
 			productName = IronIntentsUI;
 			productReference = 8A60438B239C4DBB00CFB7C0 /* IronIntentsUI.appex */;
@@ -1598,7 +1614,8 @@
 			);
 			name = Iron;
 			packageProductDependencies = (
-				8A50F126243F5253003B3A6E /* Charts */,
+				E9744A282E2F7BDF008E96D4 /* DGCharts */,
+				E9744A342E2F7DEC008E96D4 /* DGChartsDynamic */,
 			);
 			productName = "Rhino Fit";
 			productReference = 8A7D6E94200BF92E00AA0FA7 /* Iron.app */;
@@ -1851,7 +1868,6 @@
 				8AAD1043239D928C00C1A447 /* UITabView.swift in Sources */,
 				8AAD103B239D928700C1A447 /* UbiquityContainer.swift in Sources */,
 				8AAD101A239D927900C1A447 /* Color+SwiftUI.swift in Sources */,
-				8A6043A3239C4E1F00CFB7C0 /* Intents.intentdefinition in Sources */,
 				8AF5DAFB242E800800A90A60 /* StartWorkoutIntentHandler.swift in Sources */,
 				8A141CAD239C7DFC00993A61 /* Benchmark.swift in Sources */,
 				8AAD1061239D92AA00C1A447 /* BalloonMarker.swift in Sources */,
@@ -1886,6 +1902,7 @@
 				8AAD105F239D92AA00C1A447 /* StyledLineChartView.swift in Sources */,
 				8AAD1014239D927900C1A447 /* Exercise+SwiftUI.swift in Sources */,
 				8AAD1016239D927900C1A447 /* Exercise+Identifiable.swift in Sources */,
+				E9EF1DBE2E3277F30028B518 /* Intents.intentdefinition in Sources */,
 				8AAD103F239D928C00C1A447 /* BannerView.swift in Sources */,
 				8A141CB3239C873D00993A61 /* UserDefaults+AppGroup.swift in Sources */,
 				8A141CC1239C8C5A00993A61 /* Comparable+Clamped.swift in Sources */,
@@ -1943,7 +1960,6 @@
 				8AAD1035239D927900C1A447 /* WorkoutDataStorage+GroupStoreURL.swift in Sources */,
 				8A141CB6239C895600993A61 /* Benchmark.swift in Sources */,
 				8AAD102F239D927900C1A447 /* IndexSet+Identifiable.swift in Sources */,
-				8A0683B2239C6170001F0A1E /* Intents.intentdefinition in Sources */,
 				8AAD1056239D929600C1A447 /* ExerciseGroupFilter.swift in Sources */,
 				8A141CC4239C8C8A00993A61 /* SettingsStore+shared.swift in Sources */,
 				8AAD1047239D928C00C1A447 /* SheetBar.swift in Sources */,
@@ -1955,6 +1971,7 @@
 				8AAD0FF7239D879600C1A447 /* Exercise+IntentExercise.swift in Sources */,
 				8AAD1053239D929600C1A447 /* Refresher.swift in Sources */,
 				8A141CB5239C893800993A61 /* FileManager+GroupContainerURL.swift in Sources */,
+				E9EF1DBD2E3277F30028B518 /* Intents.intentdefinition in Sources */,
 				8AAD1033239D927900C1A447 /* UserDefaults+Migrate.swift in Sources */,
 				8AAD1030239D927900C1A447 /* View+TypeErased.swift in Sources */,
 				8AAD1032239D927900C1A447 /* URL+EnsureFileAccess.swift in Sources */,
@@ -2089,6 +2106,7 @@
 				8AF92550232FD47A00C6977D /* ExerciseGroupFilter.swift in Sources */,
 				8ABB4C6622CE05DD0075CCE6 /* ExerciseMuscleGroupsView.swift in Sources */,
 				8A3C5F99218E3F4F00467DA6 /* UserDefaults+PinnedCharts.swift in Sources */,
+				E9EF1DBF2E3277F30028B518 /* Intents.intentdefinition in Sources */,
 				8AC8063D22BAC54200086032 /* FeedView.swift in Sources */,
 				8AB5213E23999ED4008064B2 /* WorkoutDataStorage+shared.swift in Sources */,
 				8AE0A79E233128280021EE23 /* Quote.swift in Sources */,
@@ -2096,7 +2114,6 @@
 				8A204B3D23676E7200F40F79 /* BackupFileStore.swift in Sources */,
 				8A0C6E35252FB65100EA5F77 /* ActivitySummaryLast7DaysView.swift in Sources */,
 				8A643E142147B8430044C3A1 /* BalloonMarker.swift in Sources */,
-				8A0683B3239C6171001F0A1E /* Intents.intentdefinition in Sources */,
 				8AF0786F239B0F9400CA95D6 /* ExerciseStore+shared.swift in Sources */,
 				8A38154E23019A3F008ACDAD /* RestTimerStore.swift in Sources */,
 				8A861946236DAC0100C1E96C /* WatchConnectionManager.swift in Sources */,
@@ -2292,12 +2309,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = YES;
-				CODE_SIGN_ENTITLEMENTS = IronIntents/IronIntents.entitlements;
+				CODE_SIGN_ENTITLEMENTS = IronIntents/IronIntentsDebug.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 36;
-				DEVELOPMENT_TEAM = 2L6CX7XT2U;
+				DEVELOPMENT_TEAM = 88HLH2BRAT;
 				INFOPLIST_FILE = IronIntents/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = bootscoder;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2307,8 +2325,9 @@
 				MARKETING_VERSION = 1.6;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.kabouzeid.Iron.IronIntents;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bootscoder.Iron.IronIntents;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -2321,10 +2340,11 @@
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_ENTITLEMENTS = IronIntents/IronIntents.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 36;
-				DEVELOPMENT_TEAM = 2L6CX7XT2U;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = IronIntents/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = bootscoder;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2333,8 +2353,9 @@
 				);
 				MARKETING_VERSION = 1.6;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.kabouzeid.Iron.IronIntents;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bootscoder.Iron;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -2349,7 +2370,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 36;
-				DEVELOPMENT_TEAM = 2L6CX7XT2U;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = IronIntentsUI/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2360,7 +2381,7 @@
 				MARKETING_VERSION = 1.6;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.kabouzeid.Iron.IronIntentsUI;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bootscoder.Iron.IronIntentsUI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -2376,7 +2397,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 36;
-				DEVELOPMENT_TEAM = 2L6CX7XT2U;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = IronIntentsUI/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2386,7 +2407,7 @@
 				);
 				MARKETING_VERSION = 1.6;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.kabouzeid.Iron.IronIntentsUI;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bootscoder.com;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -2446,7 +2467,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -2501,7 +2522,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -2519,7 +2540,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 36;
-				DEVELOPMENT_TEAM = 2L6CX7XT2U;
+				DEVELOPMENT_TEAM = 88HLH2BRAT;
 				INFOPLIST_FILE = Iron/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2527,7 +2548,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.6;
-				PRODUCT_BUNDLE_IDENTIFIER = com.kabouzeid.Iron;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bootscoder.Iron;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
@@ -2544,7 +2565,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 36;
-				DEVELOPMENT_TEAM = 2L6CX7XT2U;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Iron/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2552,7 +2573,6 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.6;
-				PRODUCT_BUNDLE_IDENTIFIER = com.kabouzeid.Iron;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
@@ -2566,14 +2586,14 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2L6CX7XT2U;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = IronTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.kabouzeid.IronTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bootscoder.Iron.IronTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -2587,7 +2607,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2L6CX7XT2U;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = IronTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2611,17 +2631,18 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 36;
-				DEVELOPMENT_TEAM = 2L6CX7XT2U;
+				DEVELOPMENT_TEAM = 88HLH2BRAT;
 				GENERATE_INFOPLIST_FILE = YES;
 				IBSC_MODULE = WatchIron_Extension;
 				INFOPLIST_KEY_CFBundleDisplayName = Iron;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.kabouzeid.Iron;
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.bootscoder.Iron;
 				MARKETING_VERSION = 1.6;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.kabouzeid.Iron.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bootscoder.Iron.WatchIron;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -2639,15 +2660,14 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 36;
-				DEVELOPMENT_TEAM = 2L6CX7XT2U;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				IBSC_MODULE = WatchIron_Extension;
 				INFOPLIST_KEY_CFBundleDisplayName = Iron;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.kabouzeid.Iron;
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.bootscoder.Iron;
 				MARKETING_VERSION = 1.6;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.kabouzeid.Iron.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -2666,14 +2686,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 36;
 				DEVELOPMENT_ASSET_PATHS = "\"WatchIron Extension/Preview Content\"";
-				DEVELOPMENT_TEAM = 2L6CX7XT2U;
+				DEVELOPMENT_TEAM = 88HLH2BRAT;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "WatchIron Extension/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "WatchIron Extension";
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "Iron can display your heart rate and burned calories during a workout.";
 				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Iron can save your finished workouts to Apple Health.";
-				INFOPLIST_KEY_WKExtensionDelegateClassName = "$(PRODUCT_MODULE_NAME).ExtensionDelegate";
+				INFOPLIST_KEY_WKExtensionDelegateClassName = WatchIron_Extension.ExtensionDelegate;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2682,7 +2702,7 @@
 				MARKETING_VERSION = 1.6;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.kabouzeid.Iron.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bootscoder.Iron.WatchIron.Extension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -2701,14 +2721,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 36;
 				DEVELOPMENT_ASSET_PATHS = "\"WatchIron Extension/Preview Content\"";
-				DEVELOPMENT_TEAM = 2L6CX7XT2U;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "WatchIron Extension/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "WatchIron Extension";
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "Iron can display your heart rate and burned calories during a workout.";
 				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Iron can save your finished workouts to Apple Health.";
-				INFOPLIST_KEY_WKExtensionDelegateClassName = "$(PRODUCT_MODULE_NAME).ExtensionDelegate";
+				INFOPLIST_KEY_WKExtensionDelegateClassName = WatchIron_Extension.ExtensionDelegate;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2716,7 +2736,6 @@
 				);
 				MARKETING_VERSION = 1.6;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.kabouzeid.Iron.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -2736,7 +2755,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 36;
-				DEVELOPMENT_TEAM = 2L6CX7XT2U;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = IronWidget/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2747,7 +2766,7 @@
 				MARKETING_VERSION = 1.6;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.kabouzeid.Iron.IronWidget;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bootscoder.Iron.IronWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -2765,7 +2784,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 36;
-				DEVELOPMENT_TEAM = 2L6CX7XT2U;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = IronWidget/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2793,7 +2812,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 2L6CX7XT2U;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -2807,7 +2826,7 @@
 				);
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.kabouzeid.WorkoutDataKit;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bootscoder.Iron.WorkoutDataKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -2828,7 +2847,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 2L6CX7XT2U;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -2943,26 +2962,41 @@
 			repositoryURL = "https://github.com/danielgindi/Charts";
 			requirement = {
 				kind = upToNextMinorVersion;
-				minimumVersion = 4.1.0;
+				minimumVersion = 5.1.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		8A50F126243F5253003B3A6E /* Charts */ = {
+		E9744A282E2F7BDF008E96D4 /* DGCharts */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 8A50F125243F5253003B3A6E /* XCRemoteSwiftPackageReference "Charts" */;
-			productName = Charts;
+			productName = DGCharts;
 		};
-		8A50F128243F525D003B3A6E /* Charts */ = {
+		E9744A2A2E2F7C00008E96D4 /* DGCharts */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 8A50F125243F5253003B3A6E /* XCRemoteSwiftPackageReference "Charts" */;
-			productName = Charts;
+			productName = DGCharts;
 		};
-		8A50F12A243F5262003B3A6E /* Charts */ = {
+		E9744A2C2E2F7C07008E96D4 /* DGCharts */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 8A50F125243F5253003B3A6E /* XCRemoteSwiftPackageReference "Charts" */;
-			productName = Charts;
+			productName = DGCharts;
+		};
+		E9744A2E2E2F7DA7008E96D4 /* DGChartsDynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8A50F125243F5253003B3A6E /* XCRemoteSwiftPackageReference "Charts" */;
+			productName = DGChartsDynamic;
+		};
+		E9744A312E2F7DAE008E96D4 /* DGChartsDynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8A50F125243F5253003B3A6E /* XCRemoteSwiftPackageReference "Charts" */;
+			productName = DGChartsDynamic;
+		};
+		E9744A342E2F7DEC008E96D4 /* DGChartsDynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8A50F125243F5253003B3A6E /* XCRemoteSwiftPackageReference "Charts" */;
+			productName = DGChartsDynamic;
 		};
 /* End XCSwiftPackageProductDependency section */
 

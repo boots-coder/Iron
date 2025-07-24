@@ -1,11 +1,3 @@
-//
-//  MainContentView.swift
-//  WatchIron Extension
-//
-//  Created by Karim Abou Zeid on 02.11.19.
-//  Copyright © 2019 Karim Abou Zeid Software. All rights reserved.
-//
-
 import SwiftUI
 import WatchKit
 import HealthKit
@@ -43,7 +35,7 @@ private struct _ContentView: View {
                     VStack(spacing: 8) {
                         Image(systemName: "iphone")
                             .imageScale(.large)
-                        Text("Start a workout on your iPhone.")
+                        Text("请在 iPhone 上开始一次训练。") // 替换 "Start a workout on your iPhone."
                             .multilineTextAlignment(.center)
                     }
                 }
@@ -55,7 +47,7 @@ private struct _ContentView: View {
     
     private var errorMessage: String? {
         guard HKHealthStore.isHealthDataAvailable() else {
-            return "HealthKit is not available on this device."
+            return "此设备不支持 HealthKit。" // 替换 "HealthKit is not available on this device."
         }
         
         switch WorkoutSessionManager.healthStore.authorizationStatus(for: .workoutType()) {
@@ -64,7 +56,7 @@ private struct _ContentView: View {
         case .sharingAuthorized:
             return nil
         case .sharingDenied:
-            return "Not authorized for Apple Health. You can authorize Iron in the settings app."
+            return "未授权使用 Apple 健康数据。您可以在设置应用中授权 Iron。" // 替换 "Not authorized for Apple Health."
         @unknown default:
             return nil
         }

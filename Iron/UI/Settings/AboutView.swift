@@ -30,7 +30,7 @@ struct AboutView: View {
             
             Section {
                 Button(action: {
-                    UIApplication.shared.open(URL(string: "https://github.com/kabouzeid/Iron")!)
+                    UIApplication.shared.open(URL(string: "https://github.com/bootscoder/Iron")!)
                 }) {
                     if #available(iOS 14.0, *) {
                         Label("Source Code", image: "github.fill")

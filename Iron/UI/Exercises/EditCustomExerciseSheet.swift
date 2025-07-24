@@ -31,7 +31,7 @@ struct EditCustomExerciseSheet: View {
     }
     
     private var saveButton: some View {
-        Button("Save") {
+        Button("保存") {
             let title = self.exerciseValues.title.trimmingCharacters(in: .whitespacesAndNewlines)
             let description = self.exerciseValues.description.trimmingCharacters(in: .whitespacesAndNewlines)
             let primaryMuscle = self.exerciseValues.muscles
@@ -52,10 +52,10 @@ struct EditCustomExerciseSheet: View {
     var body: some View {
         NavigationView {
             EditCustomExerciseView(exerciseValues: $exerciseValues)
-                .navigationBarTitle("Edit Exercise", displayMode: .inline)
+                .navigationBarTitle("编辑动作", displayMode: .inline)
                 .navigationBarItems(
                     leading:
-                    Button("Cancel") {
+                    Button("取消") {
                         self.presentationMode.wrappedValue.dismiss()
                     },
                     trailing: saveButton

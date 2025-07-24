@@ -13,13 +13,13 @@ struct ActivityWorkoutsPerWeekCell : View {
     
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
-            Text("Activity")
+            Text("活动")
                 .bold()
                 .font(.subheadline)
                 .foregroundColor(.accentColor)
             
             HStack {
-                Text("Workouts Per Week")
+                Text("每周锻炼")
                     .font(.headline)
                 
                 Spacer()

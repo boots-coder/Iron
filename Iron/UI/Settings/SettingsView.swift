@@ -1,46 +1,38 @@
-//
-//  SettingsView.swift
-//  Sunrise Fit
-//
-//  Created by Karim Abou Zeid on 11.07.19.
-//  Copyright © 2019 Karim Abou Zeid Software. All rights reserved.
-//
-
 import SwiftUI
 import MessageUI
 
-struct SettingsView : View {
+struct SettingsView: View {
     @EnvironmentObject var settingsStore: SettingsStore
     
     private var mainSection: some View {
         Section {
             NavigationLink(destination: GeneralSettingsView(), isActive: $generalSelected) {
-                Text("General")
+                Text("通用设置") // 替换 "General"
             }
             
             if HealthSettingsView.isSupported {
                 NavigationLink(destination: HealthSettingsView()) {
-                    Text("Apple Health")
+                    Text("Apple 健康") // 替换 "Apple Health"
                 }
             }
             
             if WatchSettingsView.isSupported {
                 NavigationLink(destination: WatchSettingsView()) {
-                    Text("Apple Watch")
+                    Text("Apple Watch") // 替换 "Apple Watch"
                 }
             }
             
             NavigationLink(destination: BackupAndExportView()) {
-                Text("Backup & Export")
+                Text("备份与导出") // 替换 "Backup & Export"
             }
         }
     }
     
-    @State private var showSupportMailAlert = false // if mail client is not configured
+    @State private var showSupportMailAlert = false // 如果未配置邮件客户端
     private var aboutRatingAndSupportSection: some View {
         Section {
             NavigationLink(destination: AboutView()) {
-                Text("About")
+                Text("关于") // 替换 "About"
             }
 
             Button(action: {
@@ -48,7 +40,7 @@ struct SettingsView : View {
                 UIApplication.shared.open(writeReviewURL)
             }) {
                 HStack {
-                    Text("Rate Iron")
+                    Text("为 Iron 评分") // 替换 "Rate Iron"
                     Spacer()
                     Image(systemName: "star")
                 }
@@ -56,7 +48,7 @@ struct SettingsView : View {
             
             Button(action: {
                 guard MFMailComposeViewController.canSendMail() else {
-                    self.showSupportMailAlert = true // fallback
+                    self.showSupportMailAlert = true // 备用方案
                     return
                 }
                 
@@ -64,18 +56,19 @@ struct SettingsView : View {
                 mail.mailComposeDelegate = MailCloseDelegate.shared
                 mail.setToRecipients(["iron@ka.codes"])
                 
-                // TODO: replace this hack with a proper way to retreive the rootViewController
+                // TODO: 将此 hack 替换为正确的 rootViewController 获取方式
                 guard let rootVC = UIApplication.shared.activeSceneKeyWindow?.rootViewController else { return }
                 rootVC.present(mail, animated: true)
             }) {
                 HStack {
-                    Text("Send Feedback")
+                    Text("发送反馈") // 替换 "Send Feedback"
                     Spacer()
                     Image(systemName: "paperplane")
                 }
             }
             .alert(isPresented: $showSupportMailAlert) {
-                Alert(title: Text("Support E-Mail"), message: Text("iron@ka.codes"))
+                Alert(title: Text("支持邮件"), // 替换 "Support E-Mail"
+                      message: Text("iron@ka.codes"))
             }
         }
     }
@@ -84,7 +77,7 @@ struct SettingsView : View {
     private var developerSettings: some View {
         Section {
             NavigationLink(destination: DeveloperSettings()) {
-                Text("Developer")
+                Text("开发者设置") // 替换 "Developer"
             }
         }
     }
@@ -101,16 +94,16 @@ struct SettingsView : View {
                 developerSettings
                 #endif
             }
-            .navigationBarTitle(Text("Settings"))
+            .navigationBarTitle(Text("设置")) // 替换 "Settings"
         }
-        .padding(.leading, UIDevice.current.userInterfaceIdiom == .pad ? 1 : 0) // hack that makes the master view show on iPad on portrait mode
+        .padding(.leading, UIDevice.current.userInterfaceIdiom == .pad ? 1 : 0) // hack 使主视图在 iPad 上显示
     }
     
-    // select the general tab by default on iPad
+    // 默认在 iPad 上选择通用设置选项卡
     @State private var generalSelected = UIDevice.current.userInterfaceIdiom == .pad ? true : false
 }
 
-// hack because we can't store it in the View
+// hack 因为我们无法将此存储在 View 中
 private class MailCloseDelegate: NSObject, MFMailComposeViewControllerDelegate {
     static let shared = MailCloseDelegate()
     

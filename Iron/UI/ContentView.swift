@@ -1,11 +1,3 @@
-//
-//  SessionContentView.swift
-//  SwiftUI Playground
-//
-//  Created by Karim Abou Zeid on 19.06.19.
-//  Copyright © 2019 Karim Abou Zeid. All rights reserved.
-//
-
 import SwiftUI
 import WorkoutDataKit
 
@@ -26,7 +18,6 @@ struct ContentView : View {
             }
             .overlay(
                 Color.clear.frame(width: 0, height: 0)
-                    // This is a hack, we need to have this in an overlay and in Color.clear so it also works on iPad, tested on iOS 13.4
                     .actionSheet(item: $restoreBackupData) { restoreBackupDataHolder in
                         RestoreActionSheet.create(context: WorkoutDataStorage.shared.persistentContainer.viewContext, exerciseStore: ExerciseStore.shared, data: { restoreBackupDataHolder.value }) { result in
                             self.restoreResult = IdentifiableHolder(value: result)
@@ -45,64 +36,60 @@ struct ContentView : View {
                 FeedView()
                     .tag(SceneState.Tab.feed.rawValue)
                     .tabItem {
-                        Label("Feed", systemImage: "house")
+                        Label("动态", systemImage: "house") // 替换 "Feed" 为 "动态"
                     }
 
                 HistoryView()
                     .tag(SceneState.Tab.history.rawValue)
                     .tabItem {
-                        Label("History", systemImage: "clock")
+                        Label("历史记录", systemImage: "clock") // 替换 "History" 为 "历史记录"
                     }
 
                 WorkoutTab()
                     .tag(SceneState.Tab.workout.rawValue)
                     .tabItem {
-                        Label("Workout", systemImage: "plus.diamond")
+                        Label("训练", systemImage: "plus.diamond") // 替换 "Workout" 为 "训练"
                     }
 
                 ExerciseMuscleGroupsView()
                     .tag(SceneState.Tab.exercises.rawValue)
                     .tabItem {
-                        Label("Exercises", systemImage: "tray.full")
+                        Label("动作分类", systemImage: "tray.full") // 替换 "Exercises" 为 "动作分类"
                     }
 
                 SettingsView()
                     .tag(SceneState.Tab.settings.rawValue)
                     .tabItem {
-                        Label("Settings", systemImage: "gear")
+                        Label("设置", systemImage: "gear") // 替换 "Settings" 为 "设置"
                     }
             }
             .productionEnvironment()
         } else {
-            /**
-             *  We inject .productionEnvironment() for every tab, because when the "screen reading" accessibility setting is enabled,
-             *  some Tabs get created by the system in the background without its parents environment! This is probably a bug and it happens since iOS 13.4
-             */
             UITabView(viewControllers: [
                 FeedView()
                     .productionEnvironment()
                     .hostingController()
-                    .tabItem(title: "Feed", image: UIImage(systemName: "house"), tag: 0),
+                    .tabItem(title: "动态", image: UIImage(systemName: "house"), tag: 0), // 替换 "Feed" 为 "动态"
 
                 HistoryView()
                     .productionEnvironment()
                     .hostingController()
-                    .tabItem(title: "History", image: UIImage(systemName: "clock"), tag: 1),
+                    .tabItem(title: "历史记录", image: UIImage(systemName: "clock"), tag: 1), // 替换 "History" 为 "历史记录"
 
                 WorkoutTab()
                     .productionEnvironment()
                     .hostingController()
-                    .tabItem(title: "Workout", image: UIImage(systemName: "plus.square"), tag: 2),
+                    .tabItem(title: "训练", image: UIImage(systemName: "plus.square"), tag: 2), // 替换 "Workout" 为 "训练"
 
                 ExerciseMuscleGroupsView()
                     .productionEnvironment()
                     .hostingController()
-                    .tabItem(title: "Exercises", image: UIImage(systemName: "tray.full"), tag: 3),
+                    .tabItem(title: "动作分类", image: UIImage(systemName: "tray.full"), tag: 3), // 替换 "Exercises" 为 "动作分类"
 
                 SettingsView()
                     .productionEnvironment()
                     .hostingController()
-                    .tabItem(title: "Settings", image: UIImage(systemName: "gear"), tag: 4),
+                    .tabItem(title: "设置", image: UIImage(systemName: "gear"), tag: 4), // 替换 "Settings" 为 "设置"
             ], selection: sceneState.selectedTabNumber)
         }
     }

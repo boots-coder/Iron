@@ -123,7 +123,7 @@ class WorkoutSessionManager: NSObject, ObservableObject {
     }
     
     // make sure everything that modifies the session or the builder runs on this serial queue
-    static let accessQueue = DispatchQueue(label: "com.kabouzeid.workoutsessionmanagerqueue", qos: .userInitiated, target: .global(qos: .userInitiated))
+    static let accessQueue = DispatchQueue(label: "com.bootscoder.workoutsessionmanagerqueue", qos: .userInitiated, target: .global(qos: .userInitiated))
     
     static func perform(_ block: @escaping () -> Void) {
         accessQueue.async {
