@@ -20,18 +20,18 @@ struct HealthSettingsView: View {
         switch updateResult {
         case .success(let updates):
             return Alert(
-                title: Text("Successfully Updated Workouts in Apple Health"),
-                message: Text("\(updates.created) workouts were created, \(updates.deleted) workouts were deleted and \(updates.modified) workouts were modified.")
+                title: Text("成功更新了 Apple 健康中的训练记录"),
+                message: Text("创建了 \(updates.created) 个训练记录，删除了 \(updates.deleted) 个训练记录，修改了 \(updates.modified) 个训练记录。")
             )
         case .failure(let error):
-            return Alert(title: Text("Update Workouts in Apple Health Failed"), message: Text(error.localizedDescription))
+            return Alert(title: Text("更新 Apple 健康训练记录失败"), message: Text(error.localizedDescription))
         }
     }
     
     var body: some View {
         Form {
-            Section(footer: Text("Adds missing workouts to Apple Health and removes workouts from Apple Health that are no longer present in Iron. This also updates workouts where the start or end time has been modified.")) {
-                Button("Update Apple Health Workouts") {
+            Section(footer: Text("将缺失的训练记录添加到 Apple 健康，并从 Apple 健康中删除 Iron 中不再存在的训练记录。这也会更新开始或结束时间已修改的训练记录。")) {
+                Button("更新 Apple 健康训练记录") {
                     self.updating = true
                     HealthManager.shared.updateHealthWorkouts(managedObjectContext: self.managedObjectContext, exerciseStore: self.exerciseStore) { result in
                         DispatchQueue.main.async {
@@ -43,7 +43,7 @@ struct HealthSettingsView: View {
                 .disabled(updating) // wait for updating to finish before allowing to tap again
             }
         }
-        .navigationBarTitle("Apple Health", displayMode: .inline)
+        .navigationBarTitle("Apple 健康", displayMode: .inline)
         .alert(item: $updateResult) { updateResultHolder in
             self.updateResultAlert(updateResult: updateResultHolder.value)
         }

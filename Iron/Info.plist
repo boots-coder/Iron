@@ -53,9 +53,9 @@
 	<key>LSSupportsOpeningDocumentsInPlace</key>
 	<true/>
 	<key>NSHealthShareUsageDescription</key>
-	<string>Iron can display your bodyweight next to the sets of a previous workout.</string>
+	<string>Iron 可以在以前的训练组次旁显示您的体重。</string>
 	<key>NSHealthUpdateUsageDescription</key>
-	<string>Iron can save your finished workouts to Apple Health.</string>
+	<string>Iron 可以将您完成的训练保存到 Apple 健康。</string>
 	<key>NSUbiquitousContainers</key>
 	<dict>
 		<key>iCloud.com.bootscoder.Iron - 2 - 2 - 2 - 2 - 2 - 2</key>

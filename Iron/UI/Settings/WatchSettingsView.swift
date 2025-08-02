@@ -13,9 +13,9 @@ struct WatchSettingsView: View {
     
     private var footer: String {
         if settingsStore.watchCompanion {
-            return "When you start a workout, Iron's Apple Watch companion app will automatically launch to measure your heart rate and approximate your calorie consumption during the workout."
+            return "当您开始训练时，Iron 的 Apple Watch 配套应用会自动启动，测量您的心率并估算训练期间的卡路里消耗。"
         } else {
-            return "When you start a workout, Iron's Apple Watch companion app will not automatically launch to measure your heart rate and approximate your calorie consumption during the workout."
+            return "当您开始训练时，Iron 的 Apple Watch 配套应用不会自动启动，不会测量您的心率并估算训练期间的卡路里消耗。"
         }
     }
     
@@ -23,7 +23,7 @@ struct WatchSettingsView: View {
         Form {
             Section(footer: Text(footer)) {
                 Toggle(isOn: $settingsStore.watchCompanion) {
-                    Text("Apple Watch Companion")
+                    Text("Apple Watch 配套应用")
                 }
             }
         }

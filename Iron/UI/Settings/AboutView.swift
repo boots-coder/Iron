@@ -33,11 +33,11 @@ struct AboutView: View {
                     UIApplication.shared.open(URL(string: "https://github.com/bootscoder/Iron")!)
                 }) {
                     if #available(iOS 14.0, *) {
-                        Label("Source Code", image: "github.fill")
+                        Label("源代码", image: "github.fill")
                     } else {
                         HStack {
                             Image("github.fill")
-                            Text("Source Code")
+                            Text("源代码")
                         }
                     }
                 }
@@ -59,11 +59,11 @@ struct AboutView: View {
                     UIApplication.shared.open(URL(string: "https://ka.codes")!)
                 }) {
                     if #available(iOS 14.0, *) {
-                        Label("Website", systemImage: "globe")
+                        Label("网站", systemImage: "globe")
                     } else {
                         HStack {
                             Image(systemName: "globe")
-                            Text("Website")
+                            Text("网站")
                         }
                     }
                 }
@@ -74,17 +74,17 @@ struct AboutView: View {
                     UIApplication.shared.open(URL(string: "https://iron.ka.codes/privacy.html")!)
                 } label: {
                     if #available(iOS 14.0, *) {
-                        Label("Privacy Policy", systemImage: "hand.raised")
+                        Label("隐私政策", systemImage: "hand.raised")
                     } else {
                         HStack {
                             Image("hand.raised")
-                            Text("Privacy Policy")
+                            Text("隐私政策")
                         }
                     }
                 }
             }
         }
-        .navigationBarTitle("About", displayMode: .inline)
+        .navigationBarTitle("关于", displayMode: .inline)
     }
     
     private var versionString: String {

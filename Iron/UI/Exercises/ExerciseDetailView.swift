@@ -76,7 +76,7 @@ struct ExerciseDetailView : View {
     }
     
     private var closeSheetButton: some View {
-        Button("Close") {
+        Button("关闭") {
             self.activeSheet = nil
         }
     }
@@ -84,7 +84,7 @@ struct ExerciseDetailView : View {
     private var exerciseHistorySheet: some View {
         NavigationView {
             ExerciseHistoryView(exercise: self.exercise)
-                .navigationBarTitle("History", displayMode: .inline)
+                .navigationBarTitle("历史记录", displayMode: .inline)
                 .navigationBarItems(leading: closeSheetButton)
                 .environmentObject(self.settingsStore)
                 .environment(\.managedObjectContext, self.managedObjectContext)
@@ -95,7 +95,7 @@ struct ExerciseDetailView : View {
     private var exerciseStatisticsSheet: some View {
         NavigationView {
             ExerciseStatisticsView(exercise: self.exercise)
-                .navigationBarTitle("Statistics", displayMode: .inline)
+                .navigationBarTitle("统计", displayMode: .inline)
                 .navigationBarItems(leading: closeSheetButton)
                 .environmentObject(self.settingsStore)
                 .environment(\.managedObjectContext, self.managedObjectContext)
@@ -118,12 +118,12 @@ struct ExerciseDetailView : View {
     }
     
     private var muscleSection: some View {
-        Section(header: Text("Muscles".uppercased())) {
+        Section(header: Text("肌肉".uppercased())) {
             ForEach(self.exercise.primaryMuscleCommonName, id: \.hashValue) { primaryMuscle in
                 HStack {
                     Text(primaryMuscle.capitalized)
                     Spacer()
-                    Text("Primary")
+                    Text("主要")
                         .foregroundColor(.secondary)
                 }
             }
@@ -131,7 +131,7 @@ struct ExerciseDetailView : View {
                 HStack {
                     Text(secondaryMuscle.capitalized)
                     Spacer()
-                    Text("Secondary")
+                    Text("次要")
                         .foregroundColor(.secondary)
                 }
             }
@@ -139,7 +139,7 @@ struct ExerciseDetailView : View {
     }
     
     private var stepsSection: some View {
-        Section(header: Text("Steps".uppercased())) {
+        Section(header: Text("步骤".uppercased())) {
             ForEach(self.exercise.steps, id: \.hashValue) { step in
                 Text(step as String)
                     .lineLimit(nil)
@@ -148,7 +148,7 @@ struct ExerciseDetailView : View {
     }
     
     private var tipsSection: some View {
-        Section(header: Text("Tips".uppercased())) {
+        Section(header: Text("技巧".uppercased())) {
             ForEach(self.exercise.tips, id: \.hashValue) { tip in
                 Text(tip as String)
                     .lineLimit(nil)
@@ -157,7 +157,7 @@ struct ExerciseDetailView : View {
     }
     
     private var referencesSection: some View {
-        Section(header: Text("References".uppercased())) {
+        Section(header: Text("参考".uppercased())) {
             ForEach(self.exercise.references, id: \.hashValue) { reference in
                 Button(reference as String) {
                     if let url = URL(string: reference) {
@@ -169,7 +169,7 @@ struct ExerciseDetailView : View {
     }
     
     private var aliasSection: some View {
-        Section(header: Text("Also known as".uppercased())) {
+        Section(header: Text("别名".uppercased())) {
             ForEach(self.exercise.alias, id: \.hashValue) { alias in
                 Text(alias)
             }
@@ -178,19 +178,19 @@ struct ExerciseDetailView : View {
     
     private var options: [ActionSheet.Button] {
         var options: [ActionSheet.Button] = [
-            .default(Text("History"), action: {
+            .default(Text("历史记录"), action: {
                 self.activeSheet = .history
             }),
-            .default(Text("Statistics"), action: {
+            .default(Text("统计"), action: {
                 self.activeSheet = .statistics
             })
         ]
         if exerciseStore.isHidden(exercise: exercise) {
-            options.append(.default(Text("Unhide"), action: {
+            options.append(.default(Text("取消隐藏"), action: {
                 self.exerciseStore.show(exercise: self.exercise)
             }))
         } else if !exercise.isCustom {
-            options.append(.default(Text("Hide"), action: {
+            options.append(.default(Text("隐藏"), action: {
                 self.exerciseStore.hide(exercise: self.exercise)
             }))
         }
@@ -235,7 +235,7 @@ struct ExerciseDetailView : View {
             self.sheetView(type: type)
         }
         .actionSheet(isPresented: $showOptionsMenu) {
-            ActionSheet(title: Text("Exercise"), message: nil, buttons: options)
+            ActionSheet(title: Text("动作"), message: nil, buttons: options)
         }
         .navigationBarTitle(Text(exercise.title), displayMode: .inline)
         .navigationBarItems(trailing:

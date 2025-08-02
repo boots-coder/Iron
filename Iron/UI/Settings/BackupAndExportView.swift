@@ -31,17 +31,17 @@ struct BackupAndExportView: View {
     private func alert(backupError: BackupError) -> Alert {
         let errorMessage = backupError.error?.localizedDescription
         let text = errorMessage.map { Text($0) }
-        return Alert(title: Text("Could Not Create Backup"), message: text)
+        return Alert(title: Text("无法创建备份"), message: text)
     }
     
     private var cloudBackupFooter: some View {
         var strings = [String]()
         if settingsStore.autoBackup {
-            strings.append("A backup is created automatically everytime you quit the app.")
+            strings.append("每次退出应用时会自动创建备份。")
         }
-        strings.append("The backups are stored in your private iCloud Drive. Only the last backup of each day is kept. You can also access the backup files via the built in Files app.")
+        strings.append("备份存储在您的私人 iCloud Drive 中。只保留每天的最后一个备份。您也可以通过内置的文件应用访问备份文件。")
         if let creationDate = backupStore.lastBackup?.creationDate {
-            strings.append("Last backup: " + BackupFileStore.BackupFile.dateFormatter.string(from: creationDate))
+            strings.append("最后备份时间：" + BackupFileStore.BackupFile.dateFormatter.string(from: creationDate))
         }
         
         return Text(strings.joined(separator: "\n"))
@@ -49,11 +49,11 @@ struct BackupAndExportView: View {
     
     var body: some View {
         Form {
-            Section(header: Text("Export".uppercased())) {
-                Button("Workout Data") {
+            Section(header: Text("导出".uppercased())) {
+                Button("训练数据") {
                     self.showExportWorkoutDataSheet = true
                 }
-                Button("Backup") {
+                Button("备份") {
                     do {
                         os_log("Creating backup data", log: .backup, type: .default)
                         let data = try IronBackup.createBackupData(managedObjectContext: self.managedObjectContext, exerciseStore: self.exerciseStore)
@@ -70,12 +70,12 @@ struct BackupAndExportView: View {
                 }
             }
             
-            Section(header: Text("iCloud Backup".uppercased()), footer: cloudBackupFooter) {
+            Section(header: Text("iCloud 备份".uppercased()), footer: cloudBackupFooter) {
                 NavigationLink(destination: RestoreBackupView(backupStore: backupStore)) {
-                    Text("Restore")
+                    Text("恢复")
                 }
-                Toggle("Auto Backup", isOn: $settingsStore.autoBackup)
-                Button("Back Up Now") {
+                Toggle("自动备份", isOn: $settingsStore.autoBackup)
+                Button("立即备份") {
                     self.backupStore.create(data: {
                         return try self.managedObjectContext.performAndWait { context in
                             os_log("Creating backup data", log: .backup, type: .default)
@@ -88,9 +88,9 @@ struct BackupAndExportView: View {
             }
         }
         .onAppear(perform: backupStore.fetchBackups)
-        .navigationBarTitle("Backup & Export", displayMode: .inline)
+        .navigationBarTitle("备份与导出", displayMode: .inline)
         .actionSheet(isPresented: $showExportWorkoutDataSheet) {
-            ActionSheet(title: Text("Workout Data"), buttons: [
+            ActionSheet(title: Text("训练数据"), buttons: [
                 .default(Text("JSON"), action: {
                     guard let workouts = self.fetchWorkouts() else { return }
                     

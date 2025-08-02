@@ -21,7 +21,7 @@ struct OptionsView: View {
             }) {
                 HStack {
                     Image(systemName: "checkmark")
-                    Text("Finish Tracking")
+                    Text("完成追踪")
                 }
             }
             
@@ -34,12 +34,12 @@ struct OptionsView: View {
             }) {
                 HStack {
                     Image(systemName: "xmark")
-                    Text("Cancel Tracking")
+                    Text("取消追踪")
                 }
                 .foregroundColor(.red)
             }
             
-            Text("Use only if something went wrong.")
+            Text("仅在出现问题时使用。")
                 .font(.system(.caption2))
         }
     }

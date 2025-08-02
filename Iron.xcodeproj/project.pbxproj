@@ -763,6 +763,7 @@
 		8AFF0D8923032DC700F762A2 /* DateFormatter+OptionalDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+OptionalDate.swift"; sourceTree = "<group>"; };
 		E9EF1DBC2E3277F30028B518 /* Intents.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = Intents.intentdefinition; sourceTree = "<group>"; };
 		E9EF1DC02E3278F40028B518 /* IronIntentsDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = IronIntentsDebug.entitlements; sourceTree = "<group>"; };
+		E9EF1DC12E327F080028B518 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1189,6 +1190,7 @@
 		8A7D6E8B200BF92E00AA0FA7 = {
 			isa = PBXGroup;
 			children = (
+				E9EF1DC12E327F080028B518 /* README.md */,
 				8AD39685239C075E0000E3C4 /* Shared */,
 				8A7D6E96200BF92E00AA0FA7 /* Iron */,
 				8A86192C236DAB7000C1E96C /* WatchIron Extension */,

@@ -88,7 +88,7 @@ struct StartWorkoutView: View {
             .listStyleCompat_InsetGroupedListStyle()
             .navigationBarTitle("训练")
             .actionSheet(item: $offsetsToDelete) { offsets in
-                ActionSheet(title: Text("这个目前不可执行."), buttons: [
+                ActionSheet(title: Text("删除计划"), buttons: [
                     .destructive(Text("删除该训练计划"), action: {
                         self.deleteAt(offsets: offsets)
                     }),
@@ -138,14 +138,14 @@ private struct WorkoutPlanCell: View {
                     _ = self.workoutPlan.duplicate(context: self.managedObjectContext)
                     self.managedObjectContext.saveOrCrash()
                 }) {
-                    Text("Duplicate")
+                    Text("复制")
                     Image(systemName: "doc.on.doc")
                 }
                 Button(action: {
                     self.managedObjectContext.delete(self.workoutPlan)
                     self.managedObjectContext.saveOrCrash()
                 }) {
-                    Text("Delete")
+                    Text("删除")
                     Image(systemName: "trash")
                 }
             }

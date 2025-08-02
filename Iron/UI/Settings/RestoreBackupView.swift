@@ -20,7 +20,7 @@ struct RestoreBackupView: View {
     
     var body: some View {
         List {
-            Section(header: Text("Backups".uppercased()), footer: Text("Restore a backup by tapping on it.")) {
+            Section(header: Text("备份".uppercased()), footer: Text("点击备份即可恢复。")) {
                 ForEach(backupStore.backups) { backup in
                     Button(action: {
                         self.restoreBackupUrl = IdentifiableHolder(value: backup.url)
@@ -42,7 +42,7 @@ struct RestoreBackupView: View {
                 
                 // TODO: remove this once the .placeholder() works
                 if backupStore.backups.isEmpty {
-                    Button("Empty") {}
+                    Button("空") {}
                         .disabled(true)
                 }
             }
@@ -58,7 +58,7 @@ struct RestoreBackupView: View {
         .alert(item: $restoreResult) { restoreResultHolder in
             RestoreActionSheet.restoreResultAlert(restoreResult: restoreResultHolder.value)
         }
-        .navigationBarTitle("Restore Backup", displayMode: .inline)
+        .navigationBarTitle("恢复备份", displayMode: .inline)
     }
 }
 
@@ -68,10 +68,10 @@ enum RestoreActionSheet {
     
     static func create(context: NSManagedObjectContext, exerciseStore: ExerciseStore, data: @escaping () throws -> Data, completion: @escaping (RestoreResult) -> Void) -> ActionSheet {
         ActionSheet(
-            title: Text("Restore Backup"),
-            message: Text("This cannot be undone. All your workouts and custom exercises will be replaced with the ones from the backup. Your settings are not affected."),
+            title: Text("恢复备份"),
+            message: Text("此操作无法撤销。您的所有训练和自定义动作将被备份中的内容替换。您的设置不受影响。"),
             buttons: [
-                .destructive(Text("Restore"), action: {
+                .destructive(Text("恢复"), action: {
                     do {
                         try IronBackup.restoreBackupData(data: data(), managedObjectContext: context, exerciseStore: exerciseStore)
                         completion(.success(()))
@@ -87,26 +87,26 @@ enum RestoreActionSheet {
     static func restoreResultAlert(restoreResult: RestoreResult) -> Alert {
         switch restoreResult {
         case .success():
-            return Alert(title: Text("Restore Successful"))
+            return Alert(title: Text("恢复成功"))
         case .failure(let error):
             let errorMessage: String
             if let decodingError = error as? DecodingError {
                 switch decodingError {
                 case let .dataCorrupted(context):
-                    errorMessage = "Data corrupted. \(context.debugDescription)"
+                    errorMessage = "数据损坏。\(context.debugDescription)"
                 case let .keyNotFound(_, context):
-                    errorMessage = "Key not found. \(context.debugDescription)"
+                    errorMessage = "找不到键。\(context.debugDescription)"
                 case let .typeMismatch(_, context):
-                    errorMessage = "Type mismatch. \(context.debugDescription)"
+                    errorMessage = "类型不匹配。\(context.debugDescription)"
                 case let .valueNotFound(_, context):
-                    errorMessage = "Value not found. \(context.debugDescription)"
+                    errorMessage = "找不到值。\(context.debugDescription)"
                 @unknown default:
-                    errorMessage = "Decoding error. \(error.localizedDescription)"
+                    errorMessage = "解码错误。\(error.localizedDescription)"
                 }
             } else {
                 errorMessage = error.localizedDescription
             }
-            return Alert(title: Text("Restore Failed"), message: Text(errorMessage))
+            return Alert(title: Text("恢复失败"), message: Text(errorMessage))
         }
     }
 }
